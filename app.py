@@ -70,16 +70,16 @@ TILES = [
         "id": "security",
         "icon": "🛡️",
         "title": "Security Guidelines",
-        "desc": "BHP & Accenture security rules",
+        "desc": "Client & Firm security rules",
         "time": "10 min read",
         "priority": "Mandatory",
         "steps": [
-            "**DO NOT** forward any BHP emails or files to Accenture systems",
-            "**NEVER** click suspicious links — report phishing via Cofense Report button in BHP mailbox",
-            "Complete ALL BHP Cybersecurity Trainings within the stipulated timeframe",
-            "**DO NOT** use GenAI tools (Gemini, Perplexity, DeepSeek) in BHP environment",
+            "**DO NOT** forward any Client emails or files to Firm systems",
+            "**NEVER** click suspicious links — report phishing via Cofense Report button in Client mailbox",
+            "Complete ALL Client Cybersecurity Trainings within the stipulated timeframe",
+            "**DO NOT** use GenAI tools (Gemini, Perplexity, DeepSeek) in Client environment",
             "Before every action ask yourself: *'Is this needed to perform my job?'* If No — don't do it",
-            "**DO NOT** transfer BHP data outside BHP environment without BHP Line Manager approval",
+            "**DO NOT** transfer Client data outside Client environment without Client Line Manager approval",
         ]
     },
     {
@@ -90,11 +90,11 @@ TILES = [
         "time": "15 min setup",
         "priority": "Mandatory",
         "steps": [
-            "**Method 1 (Recommended) — Windows App:** Download from Microsoft Store → Sign out of Accenture account → Sign in with BHP credentials → Double-click AVD icon",
-            "**Method 2 — Web Browser:** Go to [windows.cloud.microsoft](https://windows.cloud.microsoft) → Sign in with BHP credentials → Access AVD directly",
+            "**Method 1 (Recommended) — Windows App:** Download from Microsoft Store → Sign out of Firm account → Sign in with Client credentials → Double-click AVD icon",
+            "**Method 2 — Web Browser:** Go to [windows.cloud.microsoft](https://windows.cloud.microsoft) → Sign in with Client credentials → Access AVD directly",
             "**Method 3 — Windows Desktop Client:** Same steps as Windows App",
             "⚠️ First launch often times out — click Refresh and retry after 1 hour",
-            "**Password reset / account unlock:** Go to [sspr.bhp.com](https://sspr.bhp.com) in Incognito window",
+            "**Password reset / account unlock:** Go to [sspr.client.com](https://sspr.client.com) in Incognito window",
         ]
     },
     {
@@ -106,11 +106,11 @@ TILES = [
         "priority": "Reference",
         "steps": [
             "**Black screen after login:** Press Ctrl+Shift+Esc → Task Manager → File → Run new task → type `explorer.exe`",
-            "**Remote Desktop error:** Open Remote Desktop → 3 dots → About → Reset → Continue → Subscribe with BHP credentials",
+            "**Remote Desktop error:** Open Remote Desktop → 3 dots → About → Reset → Continue → Subscribe with Client credentials",
             "**Can't click icons:** Restart your machine",
-            "**Password expired:** Open sspr.bhp.com in Incognito → Registration for self-service password reset → Change password",
+            "**Password expired:** Open sspr.client.com in Incognito → Registration for self-service password reset → Change password",
             "**Random pop-up errors:** Restart machine and click Refresh",
-            "**Still stuck?** Raise an incident via BHP ServiceNow portal",
+            "**Still stuck?** Raise an incident via Client ServiceNow portal",
         ]
     },
     {
@@ -122,11 +122,11 @@ TILES = [
         "priority": "Mandatory",
         "steps": [
             "Open the reference tracker to see which requests to raise — check the **Generic Tab** in the Excel sheet shared by your lead",
-            "Go to [bhp.service-now.com](https://bhp.service-now.com/sp?id=bhp_home)",
+            "Go to [client.service-now.com](https://client.service-now.com)",
             "Search the **Request Name** from the tracker in the ServiceNow search bar",
             "Open the sample request to understand the format, then raise the **same request for yourself**",
-            "Raise all requests as soon as you have your BHP_ID and ServiceNow access",
-            "For help contact **Ravi Saravanan** (saravanan.f.ravi@accenture.com) or **D.B. Venkateswarlu** (d.b.venkateswarlu@accenture.com)",
+            "Raise all requests as soon as you have your Client_ID and ServiceNow access",
+            "For help contact **Team Contact 1** (contact1@firm.com) or **Team Contact 2** (contact2@firm.com)",
         ]
     },
     {
@@ -151,10 +151,10 @@ TILES = [
         "time": "As needed",
         "priority": "Reference",
         "steps": [
-            "**Webex (for client calls):** Install on your Accenture laptop directly — NOT inside AVD. Download from [webex.com](https://www.webex.com) or raise a Technology Support ticket if no admin rights",
+            "**Webex (for client calls):** Install on your Firm laptop directly — NOT inside AVD. Download from [webex.com](https://www.webex.com) or raise a Technology Support ticket if no admin rights",
             "**Laptop replacement Step 1:** Raise Technology Support incident → get ticket number → raise Asset Decommission Request",
-            "**Laptop replacement Step 2:** Go to Accenture India Info Survey → select 'System replacement – Accenture Shared laptop' → complete all steps",
-            "⚠️ Enable a temp password for your Accenture account before the swap — otherwise you won't be able to log into the new laptop",
+            "**Laptop replacement Step 2:** Go to Firm India Info Survey → select 'System replacement – Firm Shared laptop' → complete all steps",
+            "⚠️ Enable a temp password for your Firm account before the swap — otherwise you won't be able to log into the new laptop",
         ]
     },
 ]
@@ -182,7 +182,7 @@ def get_badge(status):
 # ── Sidebar ───────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("### 🚀 Onboarding Assistant")
-    st.markdown("**DataEng Team** · BHP")
+    st.markdown("**DataEng Team")
     st.divider()
 
     total = len(TILES)
@@ -329,7 +329,7 @@ elif page == "👥 Admin View":
     import pandas as pd
     data = {
         "Name": ["Alex J.", "Priya M.", "Sam K.", "Ravi S.", "Neha T."],
-        "Team": ["DataEng", "Finance", "DataEng", "Engineering", "DataEng"],
+        "Team": ["Data Engineering", "Finance", "Data Engineering", "Engineering", "Data Engineering"],
         "Day": [5, 8, 12, 3, 15],
         "Completed": [3, 1, 5, 0, 6],
         "Status": ["On Track", "Behind", "On Track", "Just Started", "Complete"]
